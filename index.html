@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Reciclagem - Separe o Lixo!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Jogo de Reciclagem 🌱</h1>
+            <div class="score-board">
+                <div class="score">Pontos: <span id="score">0</span></div>
+                <div class="timer">Tempo: <span id="timer">60</span>s</div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="instructions">
+                <p>Arraste o lixo para a lixeira correta!</p>
+            </div>
+            
+            <div class="trash-items" id="trash-items">
+                <!-- Os itens de lixo aparecerão aqui dinamicamente -->
+            </div>
+        </main>
+
+        <footer class="bins-container">
+            <div class="bin" data-type="papel" style="background-color: #4A90E2;">
+                <div class="bin-icon">📄</div>
+                <div class="bin-label">Papel</div>
+            </div>
+            <div class="bin" data-type="plastico" style="background-color: #E74C3C;">
+                <div class="bin-icon">🥤</div>
+                <div class="bin-label">Plástico</div>
+            </div>
+            <div class="bin" data-type="vidro" style="background-color: #27AE60;">
+                <div class="bin-icon">🍾</div>
+                <div class="bin-label">Vidro</div>
+            </div>
+            <div class="bin" data-type="metal" style="background-color: #F39C12;">
+                <div class="bin-icon">🥫</div>
+                <div class="bin-label">Metal</div>
+            </div>
+            <div class="bin" data-type="organico" style="background-color: #8B4513;">
+                <div class="bin-icon">🍎</div>
+                <div class="bin-label">Orgânico</div>
+            </div>
+        </footer>
+
+        <div class="feedback" id="feedback"></div>
+        
+        <div class="game-over" id="game-over" style="display: none;">
+            <h2>Fim de Jogo!</h2>
+            <p>Sua pontuação final: <span id="final-score">0</span></p>
+            <button onclick="restartGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
